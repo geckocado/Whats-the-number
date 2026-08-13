@@ -8,10 +8,6 @@
       :root {
         --bg: #efefef;
         --ink: #000000;
-        --avocado-light: #d9eb7a;
-        --avocado-mid: #c8dc68;
-        --avocado-dark: #7aa72a;
-        --seed: #3f260f;
       }
 
       * {
@@ -135,109 +131,10 @@
         align-items: center;
       }
 
-      .avocado {
-        position: relative;
+      .avocado-container img {
         width: 100%;
         height: 100%;
-      }
-
-      .avocado-body {
-        position: absolute;
-        width: 280px;
-        height: 320px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background: linear-gradient(135deg, var(--avocado-light) 0%, var(--avocado-mid) 50%, var(--avocado-dark) 100%);
-        border: 6px solid #2d5016;
-        border-radius: 48% 52% 45% 55% / 52% 48% 52% 48%;
-        box-shadow: 
-          inset -10px -10px 20px rgba(0, 0, 0, 0.1),
-          inset 10px 10px 20px rgba(255, 255, 255, 0.2),
-          0 10px 30px rgba(0, 0, 0, 0.15);
-      }
-
-      .avocado-highlight {
-        position: absolute;
-        width: 80px;
-        height: 120px;
-        left: 20%;
-        top: 15%;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
-        border-radius: 50%;
-        filter: blur(8px);
-      }
-
-      .indent {
-        position: absolute;
-        width: 60px;
-        height: 50px;
-        left: 50%;
-        top: 8%;
-        transform: translateX(-50%);
-        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 70%);
-        border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
-        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15);
-      }
-
-      .seed {
-        position: absolute;
-        width: 140px;
-        height: 140px;
-        left: 50%;
-        top: 55%;
-        transform: translateX(-50%);
-        background: radial-gradient(circle at 35% 30%, #8b4513 0%, var(--seed) 40%, #1a0d04 100%);
-        border-radius: 50%;
-        border: 5px solid rgba(26, 13, 4, 0.8);
-        box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.3), inset 3px 3px 8px rgba(255, 255, 255, 0.1);
-      }
-
-      .eye {
-        position: absolute;
-        width: 48px;
-        height: 48px;
-        background: #1a0d04;
-        border-radius: 50%;
-        border: 2px solid #0a0502;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        z-index: 10;
-      }
-
-      .eye.left {
-        left: 25%;
-        top: 35%;
-      }
-
-      .eye.right {
-        right: 25%;
-        top: 35%;
-      }
-
-      .eye::after {
-        content: "";
-        position: absolute;
-        width: 14px;
-        height: 14px;
-        background: #ffffff;
-        border-radius: 50%;
-        top: 30%;
-        left: 25%;
-        box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.3);
-      }
-
-      .smile {
-        position: absolute;
-        width: 120px;
-        height: 60px;
-        left: 50%;
-        bottom: 28%;
-        transform: translateX(-50%);
-        border: 3px solid #2d5016;
-        border-top: none;
-        border-radius: 0 0 120px 120px;
-        box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 10;
+        object-fit: contain;
       }
 
       @media (max-width: 980px) {
@@ -285,18 +182,9 @@
         </div>
       </section>
 
-      <section class="avocado-wrap" aria-label="Cute custom avocado character">
+      <section class="avocado-wrap" aria-label="Cute avocado character">
         <div class="avocado-container">
-          <div class="avocado">
-            <div class="avocado-body">
-              <div class="avocado-highlight"></div>
-              <div class="indent"></div>
-            </div>
-            <div class="seed"></div>
-            <div class="eye left"></div>
-            <div class="eye right"></div>
-            <div class="smile"></div>
-          </div>
+          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad576?w=800" alt="Cute avocado with big seed and happy face" />
         </div>
       </section>
     </main>
